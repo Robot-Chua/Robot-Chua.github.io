@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — 这一页不存在 | ChuaLab</title>
+<meta name="theme-color" content="#070b12">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 24px;
+    text-align: center;
+  }
+  .notfound img { width: 56px; height: 56px; margin-bottom: 26px; }
+  .notfound .code {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  .notfound h1 {
+    margin: 14px 0 0;
+    font-size: clamp(2rem, 7vw, 3.2rem);
+    background: linear-gradient(96deg, #ffffff 10%, #b8f6f0 50%, #b9aeff 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .notfound p { max-width: 460px; margin: 16px 0 0; color: var(--dim); font-size: 0.95rem; }
+  .notfound .btn { margin-top: 28px; }
+</style>
+</head>
+<body>
+  <main class="notfound">
+    <img src="assets/logo.svg" alt="" width="56" height="56">
+    <p class="code">Error 404</p>
+    <h1>这一页不见了</h1>
+    <p>可能是链接写错了，也可能是工具改名搬了家。回首页看看现在有什么能下载。</p>
+    <a class="btn btn-primary" href="/">回到首页</a>
+  </main>
+</body>
+</html>
