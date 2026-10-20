@@ -1,6 +1,10 @@
 # ChuaLab · 静态工具站
 
+**线上地址：<https://robot-chua.github.io/>** · 仓库：<https://github.com/Robot-Chua/Robot-Chua.github.io>
+
 个人安卓游戏工具站（ChuaLab）。纯 HTML / CSS / JS，**零依赖、零构建**，`index.html` 双击就能看，也可以直接扔到 GitHub Pages。
+
+推送 `main` 分支后 GitHub Pages 会自动重新构建，几十秒后线上生效。
 
 ## 目录结构
 
@@ -11,7 +15,8 @@ chualab/
 ├─ assets/
 │  ├─ style.css            全部样式（顶部 :root 里是配色变量）
 │  ├─ app.js               交互：顶栏滚动态、移动端菜单、导航高亮、渐显、点击复制
-│  └─ logo.svg             站点图标 / 顶栏 logo
+│  ├─ logo.svg             站点图标 / 顶栏 logo
+│  └─ og.png               社交分享预览图（1200×630）
 ├─ downloads/              要对外下载的 APK 放这里
 │  ├─ VClicker-v1.4.apk            （81 KB，Android 7.0+）
 │  └─ ZonghengHelper-v2.2.apk      （73 KB，Android 11+）
@@ -30,42 +35,29 @@ python -m http.server 8000
 # 然后打开 http://127.0.0.1:8000
 ```
 
-## 部署到 GitHub Pages
+## 部署（已完成）
 
-### 方案 A：独立仓库（推荐）
+仓库是 **`Robot-Chua/Robot-Chua.github.io`**（GitHub 用户站点仓库），Pages 从 `main` 分支根目录自动发布，所以线上地址就是 **<https://robot-chua.github.io/>**，不需要在 Settings 里再配置。
 
-1. 在 GitHub 新建空仓库，例如 `chualab-site`（不要勾选 README / .gitignore）。
-2. 把 **`chualab/` 目录里的全部内容**（不是 `chualab` 这个文件夹本身）推上去：
+改完内容后只要：
 
-   ```bash
-   cd chualab
-   git init
-   git add -A
-   git commit -m "ChuaLab static site"
-   git branch -M main
-   git remote add origin https://github.com/<你的用户名>/chualab-site.git
-   git push -u origin main
-   ```
+```bash
+cd chualab
+git add -A
+git commit -m "update: 说明这次改了什么"
+git push
+```
 
-3. 仓库 → **Settings → Pages**：
-   - Source 选 `Deploy from a branch`
-   - Branch 选 `main`，目录选 `/ (root)`
-   - Save
-4. 等 1～2 分钟，访问 `https://<你的用户名>.github.io/chualab-site/`。
+推送后 GitHub Pages 会自动重建，通常 30 秒内生效（可以在仓库的 Pages 设置里看构建状态）。
 
-### 方案 B：放在已有仓库的 docs/ 下
-
-把 `chualab/` 改名为 `docs/` 放到仓库根目录，Pages 的 Branch 目录选 `/docs`。
+> 已经用 Chua 的 GitHub 账号通过 Git Credential Manager 授权过一次，凭据存在 Windows 凭据管理器里，之后的 `git push` 不会再弹授权。
 
 ### 绑定自己的域名（可选）
 
 1. 在 `chualab/` 下建一个 `CNAME` 文件，内容就是裸域名，例如 `chualab.example.com`。
-2. 域名 DNS 加一条 `CNAME` 记录指向 `<用户名>.github.io`。
+2. 域名 DNS 加一条 `CNAME` 记录指向 `robot-chua.github.io`。
 3. 仓库 Settings → Pages → Custom domain 填同一个域名，勾选 Enforce HTTPS。
-
-> 有了正式域名后，建议顺手在 `index.html` 的 `<head>` 里补上：
-> `<link rel="canonical" href="https://你的域名/">`、`<meta property="og:url" ...>`、
-> 以及 `og:image`（需要一张 1200×630 的绝对地址图片）。
+4. 域名生效后，把 `index.html` 里的 `canonical` / `og:url` / `og:image` 三处 `robot-chua.github.io` 换成新域名。
 
 ## 日常怎么改
 
