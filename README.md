@@ -19,10 +19,14 @@ chualab/
 │  └─ og.png               社交分享预览图（1200×630）
 ├─ downloads/              要对外下载的 APK 放这里
 │  ├─ VClicker-v1.4.apk            （81 KB，Android 7.0+）
-│  └─ ZonghengHelper-v2.2.apk      （73 KB，Android 11+）
+│  └─ ZonghengHelper-v1.8.apk      （69 KB，Android 11+，手机版）
 ├─ .nojekyll               告诉 GitHub Pages 别跑 Jekyll
 └─ README.md               本文件（可以留在仓库里，不影响页面）
 ```
+
+> **版本策略（2026-10-21 起）**：纵横商界助手线上**只发 v1.8 手机版**，v2.x 系列暂不上架。
+> 如果以后要换版本，把新 APK 放进 `downloads/`，同时删掉旧包，并更新卡片里的
+> 版本号 / 体积 / 更新日志 / SHA-256 / 下载链接 五处，以及在卡片上标明「手机版」。
 
 ## 本地预览
 

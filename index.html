@@ -49,9 +49,9 @@
       "name": "纵横商界助手",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Android 11+",
-      "softwareVersion": "2.2",
+      "softwareVersion": "1.8",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
-      "fileSize": "73KB",
+      "fileSize": "69KB",
       "description": "《商道高手》纵横商界的推图自动化助手，纯像素识别 + 无障碍点击，免 Root。"
     }
   ]
@@ -110,7 +110,7 @@
       <ul class="hero-stats">
         <li><span class="num">2<em>个</em></span><span class="lab">已上线工具</span></li>
         <li><span class="num">0<em>项</em></span><span class="lab">联网权限</span></li>
-        <li><span class="num">73–81<em>KB</em></span><span class="lab">单包体积</span></li>
+        <li><span class="num">69–81<em>KB</em></span><span class="lab">单包体积</span></li>
       </ul>
     </div>
   </section>
@@ -194,25 +194,25 @@
             </div>
             <div class="tool-title">
               <h3>纵横商界助手</h3>
-              <p class="sub">商道高手 · 纵横商界推图 · com.vk.sdzh</p>
+              <p class="sub">商道高手 · 纵横商界推图 · 手机版</p>
             </div>
           </div>
 
           <div class="tag-row">
-            <span class="tag is-accent">v2.2</span>
-            <span class="tag">73 KB</span>
+            <span class="tag">v1.8</span>
+            <span class="tag is-accent">手机版</span>
+            <span class="tag">69 KB</span>
             <span class="tag">Android 11+</span>
-            <span class="tag">免 Root</span>
           </div>
 
           <p class="card-desc">
-            《商道高手》「纵横商界」推图助手。从选房间、点洽谈、谈判、跳过战斗到开宝箱，
-            整套流程自动跑；卡住会自己停并留下现场，不会乱点。
+            《商道高手》「纵横商界」推图助手 · <b>手机版</b>。按手机 9:20 画面实测调校，
+            从选房间、点洽谈、谈判、跳过战斗到开宝箱整套自动跑；卡住会自己停并留下现场，不会乱点。
           </p>
 
           <ul class="feature-list">
             <li><b>全流程自动化</b>：进图 → 选白底房间 → 开始 → 洽谈 → 谈判 → 跳过战斗 → 领效果 → 开宝箱</li>
-            <li><b>按钮动态定位</b>（颜色 + 形状），9:16 / 9:20 与 1080×1920 模拟器都能对上</li>
+            <li><b>手机版画面适配</b>：坐标按 1260×2800 归一化，再按屏幕宽高比例换算</li>
             <li><b>纯像素识别</b>：不 OCR、不读内存、不改游戏数据、不联网</li>
             <li><b>安全保护</b>：前台包名检测、画面无变化看门狗、单状态超时，切出游戏就暂停</li>
             <li><b>可排查</b>：每次点击闪红圈，停机自动存图到相册，日志写明识别结果与点击坐标</li>
@@ -222,25 +222,24 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M12 8.2v5M12 16.6v.02"/><circle cx="12" cy="12" r="9"/>
             </svg>
-            <span>建议模拟器分辨率设成 1080×2400（9:20）。「公司架构」的 3×3 房间格仍按 9:20 量，9:16 下可能对不齐。</span>
+            <span>这一版是按<b>手机 9:20（1260×2800）</b>画面调的。想在模拟器上跑，请把分辨率设成 1080×2400；9:16 下部分按钮坐标会偏。</span>
           </div>
 
           <details class="changelog">
-            <summary>v2.2 更新内容</summary>
+            <summary>v1.8 更新内容</summary>
             <div class="changelog-body">
               <ul>
-                <li>宝箱坐标改为按发光像素实时计算，修掉「偏上 73 像素、点 20 次开不掉」的问题</li>
-                <li>按钮坐标按角色缓存，同一界面反复点同一个点，不再在 374/582/882 之间乱跳</li>
-                <li>宝箱连续点 6 次仍失败就停机并提示位置，不再空转</li>
-                <li>顺带修掉 v2.1 的两个真 bug：公司架构被绿字误判成「洽谈中」、洽谈点 70 次才打完</li>
+                <li>地图判定改成「陆地 + 海水」一起算，大片是海的地图不再报「未识别界面」</li>
+                <li>大区列表 → 区域地图 → 公司架构 → 洽谈 / 谈判 → 跳过战斗 → 开宝箱，整条链路打通</li>
+                <li>15 张手机截图实测界面判定全对（最低地图 0.39，最高非地图 0.12，阈值 0.25 很安全）</li>
               </ul>
-              <code class="hash">SHA-256 77d68655bf798009ac86b0f8f68d55ac0a195f019ea62fdf3abb0a22e45ed651</code>
+              <code class="hash">SHA-256 27e9dd75332c2f8344dfabbd82e46109b5f33c24ec09d53207ca1e10249eeadb</code>
             </div>
           </details>
 
           <div class="card-foot">
-            <a class="btn btn-primary btn-block" href="downloads/ZonghengHelper-v2.2.apk" download>
-              下载 APK<span class="btn-meta">73 KB</span>
+            <a class="btn btn-primary btn-block" href="downloads/ZonghengHelper-v1.8.apk" download>
+              下载 APK<span class="btn-meta">69 KB</span>
             </a>
           </div>
         </article>
